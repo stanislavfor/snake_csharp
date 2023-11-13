@@ -11,57 +11,91 @@ namespace Snake
   {
     static void Main(string[] args)
     {
-      // Console.WriteLine("Hello, World!");
-      // Console.ReadLine();
-      // int x1 = 1;
-      // int y1 = 3;
-      // char sym1 = '*';
-      // Draw(x1, y1, sym1);
-
-      // Point p1 = new Point();
-      // p1.x = 1;
-      // p1.y = 3;
-      // p1.sym = '*';
-      // Draw(p1.x, p1.y, p1.sym);
+     
       Point p1 = new Point(1, 3, '*');
       p1.Draw();
-
-      // int x2 = 4;
-      // int y2 = 5;
-      // char sym2 = '#';
-      // // Console.SetCursorPosition(x2, y2);
-      // // Console.Write(sym2);
-      // // Console.ReadLine();
-      // Draw(x2, y2, sym2);
-
-      // Point p2 = new Point();
-      // p2.x = 4;
-      // p2.y = 5;
-      // p2.sym = '#';
-      // Draw(p2.x, p2.y, p2.sym);
-      Point p2 = new Point(4, 5, '#');
+      
+      Point p2 = new Point(4, 5, '*');
       p2.Draw();
-
-      // int x3 = 7;
-      // int y3 = 8;
-      // char sym3 = '*';
-      // Draw(x3, y3, sym3);
-
-      // Point p3 = new Point();
-      // p3.x = 7;
-      // p3.y = 8;
-      // p3.sym = '*';
-      // Draw(p3.x, p3.y, p3.sym);
+      
       Point p3 = new Point(7, 8, '*');
       p3.Draw();
 
 
+      List<int> numList = new List<int>();
+      numList.Add(0);
+      numList.Add(1);
+      numList.Add(2);
+      numList.Add(3);
+      numList.Add(4);
 
-      // static void Draw(int x, int y, char sym)
+      // int x = numList[0];
+      // int y = numList[1];
+      // int z = numList[2];
+      // numList.RemoveAt(0);
+      // foreach (int i in numList)
       // {
-      //   Console.SetCursorPosition(x, y);
-      //   Console.Write(sym);
-      // };
+      //   Console.Write("\n");
+      //   Console.Write(i);
+      // }
+
+      foreach (int i in numList)
+      {
+        Console.Write("\n");
+        Console.Write(i);
+      }
+      
+
+      List<Point> pList = new List<Point>();
+      pList.Add(p1);
+      pList.Add(p2);
+      pList.Add(p3);
+
+      foreach (Point p in pList)
+      {
+        Console.Write("\n");
+        p.Draw();
+      }
+
+      List<char> charList = new List<char>();
+      charList.Add('#');
+      charList.Add('@');
+      charList.Add('+');
+
+      foreach (char item in charList)
+      {
+        Console.Write("\n");
+        Console.WriteLine(item);
+      }
+
+
+      Point point1 = new Point(numList[0], numList[0], charList[0]);
+      Point point2 = new Point(numList[0], numList[1], charList[0]);
+      Point point3 = new Point(numList[0], numList[2], charList[0]);
+      Point point4 = new Point(numList[1], numList[0], charList[1]);
+      Point point5 = new Point(numList[1], numList[1], charList[1]);
+      Point point6 = new Point(numList[1], numList[2], charList[1]);
+      Point point7 = new Point(numList[2], numList[0], charList[2]);
+
+      List<Point> pointList = new List<Point>();
+      pointList.Add(point1);
+      pointList.Add(point2);
+      pointList.Add(point3);
+      pointList.Add(point4);
+      pointList.Add(point5);
+      pointList.Add(point6);
+      pointList.Add(point7);
+
+      foreach (Point point in pointList)
+      {
+        // Console.Write("\nPoint point in pointList");
+        point.Draw();
+      }
+
+      Console.ReadLine();
+
     }
-}
+
+    
+  }
 }
