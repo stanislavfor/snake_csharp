@@ -1,25 +1,27 @@
 using System;
+// using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace Snake
 {
-    public class VerticalLine
+    public class VerticalLine : Figure
     {
-        List<Point> pList;
-        public VerticalLine(int yLeft, int yRight, int x, char sym)
+        
+        public VerticalLine(int yUp, int yDown, int x, char sym)
         {
             pList = new List<Point>();
-            for (int y = yLeft; y <= yRight; y++)
+            for (int y = yUp; y <= yDown; y++)
             {
                 Point p = new Point(x, y, sym);
                 pList.Add(p);
             }
 
         }
-    }
 
-    
+        
+
+    }   
 
 }
